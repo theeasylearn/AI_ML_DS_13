@@ -86,9 +86,9 @@ output :
 5 x 1 =   05
 2 x 1 =   02
 1 x 1 =   01
-
+-----------------------------------------------------------------
 decision making statement
--------------------------
+-----------------------------------------------------------------
 1) write a program to findout whether given shape is landscape or portrait or square using decision making statement if. 
 
 2) write a program to accept length and width of two different farm from user. and findout & display which farm is bigger 
