@@ -30,3 +30,25 @@ meter = total_inches / 39.37
 #calculate  bmi
 bmi = weight / (meter * meter)
 print("BMI ",bmi)   
+'''
+    Extremely Obese: BMI 35.0 and above
+    Obese: BMI between 30.0  34.9
+    Overweight: BMI between 25.0  29.9
+    Normal: BMI between 18.5 to 24.9
+    Underweight: BMI less than 18.5
+'''
+if bmi>=25.0 and bmi<=29.9:
+    print("you are overweight, eat less and walk more")
+elif bmi>=18.8 and bmi<=24.9:
+    print("Congratulation, you are Normal. keep maintain your weight")
+elif bmi>=30.0 and bmi<=34.9:
+    print("you are Obese, eat less and do walk  & exercise (join Gym)")
+elif bmi>=35.0:
+    print("you are Extremely Obese, you need to go through surgery")
+else:
+    print("you are underweight, you should focus on weight gain")
+
+print("Stay Healthy, stay happy")
+
+
+
