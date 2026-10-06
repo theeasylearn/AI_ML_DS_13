@@ -178,6 +178,7 @@ while loop
 4)   1    -8   27  -64  .....    1000
 
 
+
 5) write a program to make sum of all digits 
 input : 12345 process =  1+2+3+4+5 = output : fifteen 
 
