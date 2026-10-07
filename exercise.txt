@@ -189,6 +189,8 @@ input: 12345 output : 54321
 8) write a program to check whether given number is perfect no or not 
 9) write a program to check whether given number is composite no or not 
 
+
+
 for loop 
 ------------------------
 1) write a program to count odd and even number in numeric list. 
