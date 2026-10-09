@@ -142,7 +142,7 @@ do operation and display result as per user choice using switch statements.
     Leo: July 23–August 22
     Virgo: August 23–September 22
     Libra: September 23–October 22
-    Scorpio: October 24–November 21
+    Scorpio: October 23–November 21
     Sagittarius: November 22–December 21
     Capricorn: December 22–January 19
     Aquarius: January 20–February 18
@@ -189,7 +189,10 @@ input: 12345 output : 54321
 8) write a program to check whether given number is perfect no or not 
 9) write a program to check whether given number is composite no or not 
 
-
+10) write a program findout whether given number A Harshad Number no or not. 
+11) write a program findout whether given number A duck Number no or not. 
+12) write a program findout whether given number A Neon Number no or not. 
+13) write a program findout whether given number A spy Number no or not. 
 
 for loop 
 ------------------------
