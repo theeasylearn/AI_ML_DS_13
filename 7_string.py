@@ -1,19 +1,27 @@
-line = "the easylearn academy"
+line = "the_easylearn_academy "
 city = " bhavnagar"
-pincode = 364001 #integer 
 print(line)
+#print letter at 0th position
 print(line[0]) #t
-print(line[0:2]) #th
-print(line[0:3]) #the
-print(line[3:]) #easylearn academy
-print(line[:3]) #the
-print(line[::2]) #skip every 1 letter after 1 letter 
-print(line[::-1]) #print variable in reverse order 
-print(line * 3)
-print(line + city)
-# print(line + pincode) #error because you can't use + with string and integer value
-print(line + str(pincode)) 
-print(line,pincode)
+#print letter at 4th position
+print(line[4])
+#print 1st 3 letters
+print(line[0:3])
+
+#print letter from 4th position to 13th position
+print(line[4:13]) #easylearn
+
+#print all letter from 14th position onwards
+print(line[14:]) #academy
+
+#string in reverse 
+print(line[::-1])
+
+print(line+city)
+print(line*5)
+
 line = 'T.E.A'
 print(line)
-# line[0] = 'X' you can not change part of string because string is immutable
+
+# line[0] = 'the' #error
+print("Good bye")

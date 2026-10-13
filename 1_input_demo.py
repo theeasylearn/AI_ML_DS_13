@@ -1,22 +1,19 @@
-# example of input 
+#example of input
+
 #accept name
-name = input("enter your name")
-print("your name is ",name)
+name = input("Enter your name")
+print(name)
 
-address = input("what is your address")
-print("your address is ",address)
+#accept age 
+age = input("Enter your age") #input method always returns string 
 
+#convert string into integer 
+age = int(age)
 
-pincode = input("what is your pincode")
-
-#convert it into integer 
-pincode = int(pincode)
-
-print("your pincode is ",pincode)
-
-weight = input("What is your weight ")
-#convert it into float
+#accept weight
+weight = input("Enter your weight")
 weight = float(weight)
-print("your weight is ",weight)
 
-print('good bye')
+print("your age ",age)
+print("your weight ",weight)
+
