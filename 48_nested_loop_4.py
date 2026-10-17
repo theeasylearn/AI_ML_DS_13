@@ -17,10 +17,3 @@ for row in range(5,0,-1): #outer loop 4
         else:
             value = 1
     print("")
-
-
-
-
-
-
-
