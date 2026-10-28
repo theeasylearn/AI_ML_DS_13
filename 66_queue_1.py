@@ -24,21 +24,26 @@ def display():
 def dequeue():
     global queue,front,rear,size
     print(f"front = {front} rear = {rear}")
-    if front == -1 or front >= rear:
+    if front == -1 or front > rear:
         print("queue underflow")
     else:
         queue[front] = None 
         front = front + 1 
-enqueue(10)
-enqueue(20)
-enqueue(30)
-enqueue(40)
-enqueue(50)
-enqueue(60)
-display()
-dequeue() # 10
-dequeue() # 20
-dequeue() # 30
-display() # 40 50
-dequeue() # 40
-dequeue() # 50
+while True:
+    print("Press 1 for Enqueue(insert new item at rear end) operation")
+    print("Press 2 for Dequeue(delete existing item from front end) operation")
+    print("Press 3 for Display operation")
+    print("Press 0 for exit")
+    choice = int(input("Enter your choice"))
+    if choice == 1:
+        value = input("Enter value")
+        enqueue(value)
+    elif choice == 2:
+        dequeue() # 10
+    elif choice == 3:    
+        display()
+    elif choice == 0:
+        print("Good bye")
+        break
+    else:
+        print("invalid choice")
