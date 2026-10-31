@@ -1,73 +1,79 @@
-# example of circular queue 
-list = [None,None,None,None,None]
+
+# Example of Circular Queue
+queue = [None, None, None, None, None]
 front = -1
 rear = -1
 size = 5
 
+# Enqueue: Insert new element at rear end
 def enqueue(value):
-    global list,front,rear,size 
-    IsOverFlow = True
-    if front == -1:
-        front=0
-    if rear < size - 1 and front <= rear: # 5 -1 =4
-        rear = rear + 1 #0
-        list[rear] = value
-        print("value has been added into circular queue")
-        IsOverFlow = False
-    if front==1:
-        rear = 0
-        list[rear] = value
-        print("value has been added into circular queue") 
-        IsOverFlow = False
-    if rear<front:
-        rear = rear + 1
-        list[rear] = value
-        print("value has been added into circular queue") 
-        IsOverFlow = False
-
-    if IsOverFlow == True:
+    global queue, front, rear, size
+    # Check overflow condition
+    if (rear + 1) % size == front:
         print("Circular queue overflow")
-
+        return #function stop 
+    # If queue is empty
+    if front == -1:
+        front = 0
+    # Increment rear circularly
+    rear = (rear + 1) % size
+    # Insert new value
+    queue[rear] = value
+    print("Value has been added into circular queue")
+# Dequeue: Delete element from front end
 def dequeue():
-    global list,front,rear,size
-    if front == -1 or front > rear:
-        print("circular queue underflow")
+    global queue, front, rear, size
+    # Check underflow condition
+    if front == -1:
+        print("Circular queue underflow")
+        return
+    # Display deleted element
+    print("Deleted element:", queue[front])
+    # Remove element
+    queue[front] = None
+    # If only one element is present
+    if front == rear:
+        front = -1
+        rear = -1
     else:
-        list[front] = None 
-        front = front + 1 
+        # Increment front circularly
+        front = (front + 1) % size
+    print("Element has been deleted from circular queue")
+
+# Display: Display all elements of circular queue
 def display():
-    global list,front,rear
+    global queue, front, rear, size
     print(f"front = {front} rear = {rear}")
     if front == -1:
-        print("queue is empty")
-    else:
-        print("-"*100)
-        if front<=rear:
-            for index in range(front,rear+1):
-                print(list[index],end=' ')
-        else:
-            for index in range(0,rear):
-                print(list[index],end=' ')
-            for index in range(front,size):
-                print(list[index],end=' ')
-        print("")
-        print("-"*100)
+        print("Circular queue is empty")
+        return
+    print("-" * 100)
+    index = front
+    while True:
+        print(queue[index], end=' ')
+        if index == rear:
+            break
+        index = (index + 1) % size
+    print()
+    print("-" * 100)
+
+# Main program
 while True:
-    print("Press 1 for Enqueue(insert new item at rear end) operation")
-    print("Press 2 for Dequeue(delete existing item from front end) operation")
-    print("Press 3 for Display operation")
-    print("Press 0 for exit")
-    choice = int(input("Enter your choice"))
+    print("\nPress 1 for Enqueue (Insert new item at rear end)")
+    print("Press 2 for Dequeue (Delete item from front end)")
+    print("Press 3 for Display")
+    print("Press 0 for Exit")
+    choice = int(input("Enter your choice: "))
     match choice:
-        case 1: # choice == 1
-            value = input("Enter value to insert in circular queue")
+        case 1:
+            value = input("Enter value to insert in circular queue: ")
             enqueue(value)
-        case 2: # choice == 2
+        case 2:
             dequeue()
-        case 3: 
+        case 3:
             display()
         case 0:
-            print("good bye")
-            break 
-        case _: # all cases are false 
+            print("Good bye")
+            break
+        case _:
             print("Invalid choice")
